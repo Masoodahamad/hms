@@ -1,0 +1,47 @@
+Hospital Management System (HMS)
+================================
+
+This project is a Flask-based Hospital Management System (HMS) designed to simplify
+the management of hospital operations, including patients, doctors, and appointments.
+It provides a RESTful backend that allows for CRUD (Create, Read, Update, Delete)
+operations through APIs and integrates email notifications for appointment updates.
+
+Key Features
+------------
+1. **Patient Management**
+   - Add, view, update, and delete patient records.
+   - Store personal details such as name, age, gender, and contact information.
+
+2. **Doctor Management**
+   - Manage doctor profiles, including their names, specializations, and schedules.
+
+3. **Appointment Management**
+   - Schedule and manage appointments between patients and doctors.
+   - Prevent overlapping time slots and ensure valid associations.
+
+4. **Email Notifications**
+   - Send automatic appointment confirmations and reminders using SMTP.
+   - Configurable through environment variables and `.env` file.
+
+5. **Database Integration**
+   - Uses SQLAlchemy ORM for easy database operations.
+   - Default support for SQLite (configurable for MySQL/PostgreSQL).
+
+6. **REST API Support**
+   - Provides JSON-based API endpoints for integration with frontends or third-party systems.
+
+7. **Security & Configuration**
+   - Includes configurable secret key and email credentials via environment variables.
+   - Supports TLS/SSL for secure email transmission.
+
+Project Structure
+-----------------
+app/
+│
+├── __init__.py       - Initializes the Flask application and configuration.
+├── config.py         - Contains configuration settings and environment variable handling.
+├── models.py         - Defines database models (Patient, Doctor, Appointment).
+├── routes.py         - Implements Flask routes for CRUD and API endpoints.
+├── emailer.py        - Handles sending email notifications.
+└── templates/        - (Optional) HTML templates for basic UI (if frontend added).
+
